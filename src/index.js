@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import reportWebVitals from './reportWebVitals';
+import reportWebVitals from './reportWebVitals.js';
 // Bootstrap link
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
@@ -10,6 +10,8 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Home from './pages/Home/Home.jsx';
 import About from './pages/About/About.jsx';
 import Contact from './pages/Contact/Contact.jsx'
+import SurahCards from './pages/Surah/SurahCards.jsx';
+import JuzCards from './pages/Juz/JuzCards.jsx'
 
 const router = createBrowserRouter([
   {
@@ -19,6 +21,14 @@ const router = createBrowserRouter([
       {
         path: "",
         element: <Home />
+      },
+      {
+        path: "surahCards",
+        element: <SurahCards />
+      },
+      {
+        path: "juzCards",
+        element: <JuzCards />
       },
       {
         path: "/about",
