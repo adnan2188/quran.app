@@ -11,7 +11,10 @@ import Home from './pages/Home/Home.jsx';
 import About from './pages/About/About.jsx';
 import Contact from './pages/Contact/Contact.jsx'
 import SurahCards from './pages/Surah/SurahCards.jsx';
-import JuzCards from './pages/Juz/JuzCards.jsx'
+import JuzCards from './pages/Juz/JuzCards.jsx';
+import JuzData from './pages/Juz/JuzData.jsx';
+import Juz_translation from './pages/Translation_pages/Juz_translation.jsx'
+import SurahData from './pages/Surah/SurahData.jsx';
 
 const router = createBrowserRouter([
   {
@@ -23,12 +26,24 @@ const router = createBrowserRouter([
         element: <Home />
       },
       {
-        path: "surahCards",
+        path: "SurahCards",
         element: <SurahCards />
       },
       {
-        path: "juzCards",
+        path: "SurahData/:id",
+        element: <SurahData />
+      },
+      {
+        path: "JuzCards",
         element: <JuzCards />
+      },
+      {
+        path: "JuzData/:id",
+        element: <JuzData />
+      },
+      {
+        path: "Juz-translation/:id",
+        element: <Juz_translation />
       },
       {
         path: "/about",
